@@ -474,3 +474,32 @@ nav.pagination {
   margin-top: 50px;
   transform: translateY(-50%) translateX(20px);
 }
+
+#toc {
+    position: absolute;
+    //float: left;
+    list-style: none;
+    ul {
+        list-style: none;
+    }
+    a {
+        font-weight: bold;
+        text-decoration: none;
+        color: $title;
+        font-size: 0.9rem;
+        &:hover {
+            color: $accent;
+        }
+    }
+    a.toc-h1 {
+        font-size: 1.25rem;
+    }
+    a.toc-h2 {
+        font-size: 1rem;
+    }
+    > li li { // all except the outermost
+        border-left: 1px solid $outline; // draw a line on the left
+        margin-left: -2rem;
+        padding-left: 1rem;
+    }
+}
